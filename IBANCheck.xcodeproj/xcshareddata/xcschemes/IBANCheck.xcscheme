@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77CB6F8080A8C77585C273F2"
+               BuildableName = "libPods-IBANCheck.a"
+               BlueprintName = "Pods-IBANCheck"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "42F1DC611ACAEE3B0096BF52"
                BuildableName = "IBANCheck.app"
                BlueprintName = "IBANCheck"
