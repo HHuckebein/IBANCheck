@@ -1,0 +1,10 @@
+language: objective-c
+
+before_install:
+  - brew update
+  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+
+script:
+- xcodebuild clean build -scheme ISO3661-1-alpha2 -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1'
+- xctool test -scheme ISO3661-1-alpha2 -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=8.1'
+
