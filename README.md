@@ -1,7 +1,7 @@
 # IBANCheck
 What is it for?
 -------------------
-Checks a given IBAN (International Banking Account Number) against 
+Checks a given IBAN (International Banking Account Number) against ISO 13616:2007.
 
 ![Build Status](https://travis-ci.org/HHuckebein/IBANCheck.svg?branch=master) ![Cocoapods Version](https://img.shields.io/cocoapods/v/IBANCheck.svg)
 
