@@ -1,5 +1,12 @@
 language: objective-c
 
+notifications:
+  email:
+    recipients:
+      - info@berndrabe.de
+    on_success: [always]
+    on_failure: [change]
+
 before_install:
   - brew update
   - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
