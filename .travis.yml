@@ -3,7 +3,7 @@ language: objective-c
 notifications:
   email:
     recipients:
-      - info@berndrabe.de
+      - development@berndrabe.de
     on_success: [always]
     on_failure: [change]
 
