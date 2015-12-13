@@ -1,0 +1,17 @@
+PODS:
+  - ISO3661-1Alpha2_objc (0.0.2)
+  - OCHamcrest (4.3.0)
+  - OCMockito (2.0.1):
+    - OCHamcrest (~> 4.0)
+
+DEPENDENCIES:
+  - ISO3661-1Alpha2_objc
+  - OCHamcrest
+  - OCMockito
+
+SPEC CHECKSUMS:
+  ISO3661-1Alpha2_objc: 46b636a86bf9a652d8907f19e5d024543557b9ad
+  OCHamcrest: cd63d27f48a266d4412c0b295b01b8f0940efa81
+  OCMockito: f92ad4c6fac2841a88558879cfe517c40aebf91e
+
+COCOAPODS: 0.39.0

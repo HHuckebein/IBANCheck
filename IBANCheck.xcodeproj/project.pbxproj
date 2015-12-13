@@ -16,7 +16,6 @@
 		42F1DC731ACAEE3B0096BF52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F1DC721ACAEE3B0096BF52 /* Images.xcassets */; };
 		42F1DC761ACAEE3B0096BF52 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F1DC741ACAEE3B0096BF52 /* LaunchScreen.xib */; };
 		42F1DC8D1ACAEE740096BF52 /* IBANCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F1DC8C1ACAEE740096BF52 /* IBANCheck.m */; };
-		42F1DC8F1ACAEEBC0096BF52 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 42F1DC8E1ACAEEBC0096BF52 /* Podfile */; };
 		BB464D878B3827C7A9A43794 /* libPods-IBANCheck.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D98691E495B51C30172CB1D /* libPods-IBANCheck.a */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +46,6 @@
 		42F1DC801ACAEE3B0096BF52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42F1DC8B1ACAEE740096BF52 /* IBANCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBANCheck.h; sourceTree = "<group>"; };
 		42F1DC8C1ACAEE740096BF52 /* IBANCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBANCheck.m; sourceTree = "<group>"; };
-		42F1DC8E1ACAEEBC0096BF52 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4D5538B36CFF7544F177E32E /* Pods-IBANCheckTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IBANCheckTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IBANCheckTests/Pods-IBANCheckTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D98691E495B51C30172CB1D /* libPods-IBANCheck.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IBANCheck.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		660751A6877E96C695B9BF30 /* libPods-IBANCheckTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IBANCheckTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +96,6 @@
 		42F1DC591ACAEE3B0096BF52 = {
 			isa = PBXGroup;
 			children = (
-				42F1DC8E1ACAEEBC0096BF52 /* Podfile */,
 				42F1DC641ACAEE3B0096BF52 /* IBANCheck */,
 				42F1DC7E1ACAEE3B0096BF52 /* IBANCheckTests */,
 				42F1DC631ACAEE3B0096BF52 /* Products */,
@@ -171,6 +168,7 @@
 				42F1DC5F1ACAEE3B0096BF52 /* Frameworks */,
 				42F1DC601ACAEE3B0096BF52 /* Resources */,
 				5A02065802317DFCF1E355F5 /* Copy Pods Resources */,
+				844BF205813DC5817E18F477 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +188,7 @@
 				42F1DC781ACAEE3B0096BF52 /* Frameworks */,
 				42F1DC791ACAEE3B0096BF52 /* Resources */,
 				A4CF5A3FC000E30310C75939 /* Copy Pods Resources */,
+				9BD2870CA319396025012B18 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,7 +206,7 @@
 		42F1DC5A1ACAEE3B0096BF52 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "RABE_IT Services";
 				TargetAttributes = {
 					42F1DC611ACAEE3B0096BF52 = {
@@ -245,7 +244,6 @@
 			files = (
 				42F1DC711ACAEE3B0096BF52 /* Main.storyboard in Resources */,
 				42F1DC761ACAEE3B0096BF52 /* LaunchScreen.xib in Resources */,
-				42F1DC8F1ACAEEBC0096BF52 /* Podfile in Resources */,
 				42F1DC731ACAEE3B0096BF52 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +271,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBANCheck/Pods-IBANCheck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		844BF205813DC5817E18F477 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBANCheck/Pods-IBANCheck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD2870CA319396025012B18 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IBANCheckTests/Pods-IBANCheckTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A4CF5A3FC000E30310C75939 /* Copy Pods Resources */ = {
@@ -392,6 +420,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -455,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IBANCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.berndrabe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -466,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IBANCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.berndrabe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -485,6 +516,7 @@
 				);
 				INFOPLIST_FILE = IBANCheckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.berndrabe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBANCheck.app/IBANCheck";
 			};
@@ -501,6 +533,7 @@
 				);
 				INFOPLIST_FILE = IBANCheckTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "de.berndrabe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IBANCheck.app/IBANCheck";
 			};
