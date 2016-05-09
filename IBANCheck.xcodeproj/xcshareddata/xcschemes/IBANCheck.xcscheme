@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "355FF9D2F3C6B384BB8686E55520A4FB"
-               BuildableName = "libPods-IBANCheck.a"
+               BlueprintIdentifier = "865B95D38159AACA13F07319DB50B833"
+               BuildableName = "Pods_IBANCheck.framework"
                BlueprintName = "Pods-IBANCheck"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>

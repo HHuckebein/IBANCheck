@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "IBANCheck"
-  s.version      = "0.0.3"
+  s.version      = "0.0.4"
   s.summary      = "Validates a given IBAN agains ISO 13616:2007."
   s.description  = <<-DESC
                    Validate comprises length check (precise for DE, CH and LI)
