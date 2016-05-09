@@ -1,5 +1,5 @@
 #import "IBANCheck.h"
-#import <ISO3661-1Alpha2_objc/ISO3661_1alpha2_c.h>
+@import ISO3661_1Alpha2_objc;
 
 @interface NSString (IBAN)
 - (NSString *)ibanTransformedString;

@@ -12,8 +12,6 @@
 
     // Test support
 #import <XCTest/XCTest.h>
-
-#define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 
 // Uncomment the next two lines to use OCMockito for mock objects:
@@ -49,17 +47,17 @@
 
 - (void)test_correctGermanIBAN
 {
-    assertThatBool([IBANCheck validateIBAN:_correctFormattedGermanIBAN], isTrue());
+    HC_assertThatBool([IBANCheck validateIBAN:_correctFormattedGermanIBAN], HC_isTrue());
 }
 
 - (void)test_correctSuisseIBAN
 {
-    assertThatBool([IBANCheck validateIBAN:_correctFormattedCH], isTrue());
+    HC_assertThatBool([IBANCheck validateIBAN:_correctFormattedCH], HC_isTrue());
 }
 
 - (void)test_correctInternationalIBAN
 {
-    assertThatBool([IBANCheck validateIBAN:_correctFormattedInternationalIBAN], isTrue());
+    HC_assertThatBool([IBANCheck validateIBAN:_correctFormattedInternationalIBAN], HC_isTrue());
 }
 
 - (void)test_germanIBANLengthShouldNotExceedMaximumOf22 {
@@ -67,7 +65,7 @@
     NSString *iban = [_correctFormattedGermanIBAN stringByAppendingString:@"0"];
     
     // then
-    assertThatBool([IBANCheck validateIBANLength:iban], isFalse());
+    HC_assertThatBool([IBANCheck validateIBANLength:iban], HC_isFalse());
 }
 
 - (void)test_suisseIBANLengthShouldNotExceedMaximumOf21 {
@@ -75,7 +73,7 @@
     NSString *iban = [_correctFormattedCH stringByAppendingString:@"0"];
     
     // then
-    assertThatBool([IBANCheck validateIBANLength:iban], isFalse());
+    HC_assertThatBool([IBANCheck validateIBANLength:iban], HC_isFalse());
 }
 
 - (void)test_internationalIBANLengthShouldNotExceedMaximumOf34 {
@@ -84,12 +82,12 @@
     NSString *iban = [_correctFormattedInternationalIBAN stringByAppendingString:addOn];
     
     // then
-    assertThatBool([IBANCheck validateIBANLength:iban], isFalse());
+    HC_assertThatBool([IBANCheck validateIBANLength:iban], HC_isFalse());
 }
 
 - (void)test_thatgermanIBANisKnownCountryCode {
     // then
-    assertThatBool([IBANCheck validateIBANCountryCode:_correctFormattedGermanIBAN], isTrue());
+    HC_assertThatBool([IBANCheck validateIBANCountryCode:_correctFormattedGermanIBAN], HC_isTrue());
 }
 
 - (void)test_IBANwithUnknownCountry {
@@ -97,7 +95,7 @@
     NSString *iban = @"XX47212110090000000235698741";
     
     // then
-    assertThatBool([IBANCheck validateIBANCountryCode:iban], isFalse());
+    HC_assertThatBool([IBANCheck validateIBANCountryCode:iban], HC_isFalse());
 }
 
 - (void)test_IBANForAllowedCharacterSet01 {
@@ -105,7 +103,7 @@
     NSString *iban = @"XX472121100900000%0235698741";
     
     // then
-    assertThatBool([IBANCheck validateIBANAllowedCharacterSet:iban], isFalse());
+    HC_assertThatBool([IBANCheck validateIBANAllowedCharacterSet:iban], HC_isFalse());
 }
 
 - (void)test_IBANForAllowedCharacterSet02 {
@@ -113,19 +111,19 @@
     NSString *iban = @"ab4721211009000000235698741";
     
     // then
-    assertThatBool([IBANCheck validateIBANAllowedCharacterSet:iban], isTrue());
+    HC_assertThatBool([IBANCheck validateIBANAllowedCharacterSet:iban], HC_isTrue());
 }
 
 - (void)test_formattedIBAN_DE {
-    assertThat([IBANCheck formattedIBAN:_correctFormattedGermanIBAN], is(@"DE08 7009 0100 1234 5678 90"));
+    HC_assertThat([IBANCheck formattedIBAN:_correctFormattedGermanIBAN], HC_is(@"DE08 7009 0100 1234 5678 90"));
 }
 
 - (void)test_formattedIBAN_CH {
-    assertThat([IBANCheck formattedIBAN:_correctFormattedCH], is(@"CH10 0023 00A1 0235 0260 1"));
+    HC_assertThat([IBANCheck formattedIBAN:_correctFormattedCH], HC_is(@"CH10 0023 00A1 0235 0260 1"));
 }
 
 - (void)test_formattedIBAN_INT {
-    assertThat([IBANCheck formattedIBAN:_correctFormattedInternationalIBAN], is(@"AL47 2121 1009 0000 0002 3569 8741"));
+    HC_assertThat([IBANCheck formattedIBAN:_correctFormattedInternationalIBAN], HC_is(@"AL47 2121 1009 0000 0002 3569 8741"));
 }
 
 @end
